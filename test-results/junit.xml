@@ -1,0 +1,277 @@
+<testsuites id="" name="" tests="3" failures="3" skipped="0" errors="0" time="142.360016">
+<testsuite name="checks.spec.ts" timestamp="2026-03-30T20:09:43.565Z" hostname="chromium" tests="3" failures="3" skipped="0" time="387.928" errors="0">
+<testcase name="Grafana Synthetic Monitoring demo › filters checks by location" classname="checks.spec.ts" time="129.09">
+<failure message="checks.spec.ts:6:7 filters checks by location" type="FAILURE">
+<![CDATA[  [chromium] › checks.spec.ts:6:7 › Grafana Synthetic Monitoring demo › filters checks by location ─
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: /checks/i }).first()
+
+
+       at ..\pages\checks.page.ts:48
+
+      46 |   async openChecks(): Promise<void> {
+      47 |     await expect(this.page).toHaveURL(/play\.grafana\.org/);
+    > 48 |     await this.checksNavLink.click();
+         |                              ^
+      49 |   }
+      50 |
+      51 |   async waitForChecksContent(): Promise<void> {
+        at ChecksPage.openChecks (C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\pages\checks.page.ts:48:30)
+        at C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\tests\checks.spec.ts:10:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium\error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: /checks/i }).first()
+
+
+       at ..\pages\checks.page.ts:48
+
+      46 |   async openChecks(): Promise<void> {
+      47 |     await expect(this.page).toHaveURL(/play\.grafana\.org/);
+    > 48 |     await this.checksNavLink.click();
+         |                              ^
+      49 |   }
+      50 |
+      51 |   async waitForChecksContent(): Promise<void> {
+        at ChecksPage.openChecks (C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\pages\checks.page.ts:48:30)
+        at C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\tests\checks.spec.ts:10:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium\video.webm]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium\error-context.md]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-982e4--filters-checks-by-location-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Grafana Synthetic Monitoring demo › opens a check and shows matching details" classname="checks.spec.ts" time="131.888">
+<failure message="checks.spec.ts:33:7 opens a check and shows matching details" type="FAILURE">
+<![CDATA[  [chromium] › checks.spec.ts:33:7 › Grafana Synthetic Monitoring demo › opens a check and shows matching details 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: /checks/i }).first()
+
+
+       at ..\pages\checks.page.ts:48
+
+      46 |   async openChecks(): Promise<void> {
+      47 |     await expect(this.page).toHaveURL(/play\.grafana\.org/);
+    > 48 |     await this.checksNavLink.click();
+         |                              ^
+      49 |   }
+      50 |
+      51 |   async waitForChecksContent(): Promise<void> {
+        at ChecksPage.openChecks (C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\pages\checks.page.ts:48:30)
+        at C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\tests\checks.spec.ts:38:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium\error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: /checks/i }).first()
+
+
+       at ..\pages\checks.page.ts:48
+
+      46 |   async openChecks(): Promise<void> {
+      47 |     await expect(this.page).toHaveURL(/play\.grafana\.org/);
+    > 48 |     await this.checksNavLink.click();
+         |                              ^
+      49 |   }
+      50 |
+      51 |   async waitForChecksContent(): Promise<void> {
+        at ChecksPage.openChecks (C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\pages\checks.page.ts:48:30)
+        at C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\tests\checks.spec.ts:38:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium\video.webm]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium\error-context.md]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-2779e--and-shows-matching-details-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Grafana Synthetic Monitoring demo › shows a clear empty state when filters return no data" classname="checks.spec.ts" time="126.95">
+<failure message="checks.spec.ts:47:7 shows a clear empty state when filters return no data" type="FAILURE">
+<![CDATA[  [chromium] › checks.spec.ts:47:7 › Grafana Synthetic Monitoring demo › shows a clear empty state when filters return no data 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: /checks/i }).first()
+
+
+       at ..\pages\checks.page.ts:48
+
+      46 |   async openChecks(): Promise<void> {
+      47 |     await expect(this.page).toHaveURL(/play\.grafana\.org/);
+    > 48 |     await this.checksNavLink.click();
+         |                              ^
+      49 |   }
+      50 |
+      51 |   async waitForChecksContent(): Promise<void> {
+        at ChecksPage.openChecks (C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\pages\checks.page.ts:48:30)
+        at C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\tests\checks.spec.ts:51:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium\error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: /checks/i }).first()
+
+
+       at ..\pages\checks.page.ts:48
+
+      46 |   async openChecks(): Promise<void> {
+      47 |     await expect(this.page).toHaveURL(/play\.grafana\.org/);
+    > 48 |     await this.checksNavLink.click();
+         |                              ^
+      49 |   }
+      50 |
+      51 |   async waitForChecksContent(): Promise<void> {
+        at ChecksPage.openChecks (C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\pages\checks.page.ts:48:30)
+        at C:\Users\ecolm\Downloads\grafana_case_solution1\grafana_case_solution\tests\checks.spec.ts:51:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium\video.webm]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium\error-context.md]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|checks-Grafana-Synthetic-M-da118-when-filters-return-no-data-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

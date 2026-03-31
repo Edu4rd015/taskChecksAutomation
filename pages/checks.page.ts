@@ -21,7 +21,7 @@ export class ChecksPage {
   get locationFilter(): Locator {
     return this.page
       .getByRole('combobox')
-      .or(this.page.getByRole('button', { name: /location/i }))
+      .or(this.page.getByRole('button', { name: /region/i }))
       .first();
   }
 

@@ -1,0 +1,621 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#pageContent"
+      - generic [ref=e6]: Skip to main content
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - link "Grafana" [ref=e10] [cursor=pointer]:
+            - /url: /
+            - img "Grafana" [ref=e11]
+          - generic [ref=e12]: Grafana
+        - button "Undock menu" [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+        - button "Close menu" [ref=e16] [cursor=pointer]:
+          - img [ref=e17]
+      - navigation [ref=e19]:
+        - list "Navigation" [ref=e23]:
+          - listitem [ref=e24]:
+            - link "Home" [ref=e28] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e30]:
+                - img [ref=e31]
+                - paragraph [ref=e33]: Home
+          - listitem [ref=e34]:
+            - generic [ref=e35]:
+              - link "Starred" [ref=e38] [cursor=pointer]:
+                - /url: /dashboards?starred
+                - generic [ref=e40]:
+                  - img [ref=e41]
+                  - paragraph [ref=e43]: Starred
+              - 'button "Expand section: Starred" [ref=e45] [cursor=pointer]':
+                - img [ref=e46]
+          - listitem [ref=e48]:
+            - link "Dashboards" [ref=e52] [cursor=pointer]:
+              - /url: /dashboards
+              - generic [ref=e54]:
+                - img [ref=e55]
+                - paragraph [ref=e57]: Dashboards
+          - listitem [ref=e58]:
+            - link "Explore" [ref=e62] [cursor=pointer]:
+              - /url: /explore
+              - generic [ref=e64]:
+                - img [ref=e65]
+                - paragraph [ref=e67]: Explore
+          - listitem [ref=e68]:
+            - generic [ref=e69]:
+              - link "Drilldown" [ref=e72] [cursor=pointer]:
+                - /url: /drilldown
+                - generic [ref=e74]:
+                  - img [ref=e75]
+                  - paragraph [ref=e80]: Drilldown
+              - 'button "Expand section: Drilldown" [ref=e82] [cursor=pointer]':
+                - img [ref=e83]
+          - listitem [ref=e85]:
+            - generic [ref=e86]:
+              - link "Alerts & IRM" [ref=e89] [cursor=pointer]:
+                - /url: /alerts-and-incidents
+                - generic [ref=e91]:
+                  - img [ref=e92]
+                  - paragraph [ref=e94]: Alerts & IRM
+              - 'button "Expand section: Alerts &amp; IRM" [ref=e96] [cursor=pointer]':
+                - img [ref=e97]
+          - listitem [ref=e99]:
+            - generic [ref=e100]:
+              - link "AI & machine learning" [ref=e103] [cursor=pointer]:
+                - /url: /a/grafana-ml-app/home
+                - generic [ref=e105]:
+                  - img [ref=e106]
+                  - paragraph [ref=e110]: AI & machine learning
+              - 'button "Expand section: AI &amp; machine learning" [ref=e112] [cursor=pointer]':
+                - img [ref=e113]
+          - listitem [ref=e115]:
+            - generic [ref=e116]:
+              - link "Testing & synthetics" [ref=e119] [cursor=pointer]:
+                - /url: /testing-and-synthetics
+                - generic [ref=e121]:
+                  - img [ref=e122]
+                  - paragraph [ref=e126]: Testing & synthetics
+              - 'button "Collapse section: Testing &amp; synthetics" [expanded] [ref=e128] [cursor=pointer]':
+                - img [ref=e129]
+            - list [ref=e131]:
+              - listitem [ref=e132]:
+                - generic [ref=e133]:
+                  - link "Synthetics" [ref=e136] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/home
+                    - paragraph [ref=e139]: Synthetics
+                  - 'button "Expand section: Synthetics" [ref=e141] [cursor=pointer]':
+                    - img [ref=e142]
+          - listitem [ref=e144]:
+            - generic [ref=e145]:
+              - link "Observability" [ref=e148] [cursor=pointer]:
+                - /url: /observability
+                - generic [ref=e150]:
+                  - img [ref=e151]
+                  - paragraph [ref=e153]: Observability
+              - 'button "Expand section: Observability" [ref=e155] [cursor=pointer]':
+                - img [ref=e156]
+          - listitem [ref=e158]:
+            - generic [ref=e159]:
+              - link "Administration" [ref=e162] [cursor=pointer]:
+                - /url: /admin
+                - generic [ref=e164]:
+                  - img [ref=e165]
+                  - paragraph [ref=e167]: Administration
+              - 'button "Expand section: Administration" [ref=e169] [cursor=pointer]':
+                - img [ref=e170]
+    - banner [ref=e172]:
+      - generic [ref=e173]:
+        - navigation "Breadcrumbs" [ref=e175]:
+          - list [ref=e176]:
+            - listitem [ref=e177]:
+              - link "Testing & synthetics" [ref=e178] [cursor=pointer]:
+                - /url: /testing-and-synthetics
+              - img [ref=e180]
+            - listitem [ref=e182]:
+              - link "Synthetics" [ref=e183] [cursor=pointer]:
+                - /url: /a/grafana-synthetic-monitoring-app/home
+              - img [ref=e185]
+            - listitem [ref=e187]:
+              - generic "Home" [ref=e188]
+        - generic [ref=e189]:
+          - generic [ref=e191]:
+            - img [ref=e193]
+            - button "Search..." [ref=e195] [cursor=pointer]
+            - generic [ref=e197]: ctrl+k
+          - button "Help" [ref=e198] [cursor=pointer]:
+            - img [ref=e199]
+          - link "Sign in" [ref=e202] [cursor=pointer]:
+            - /url: /login
+    - main [ref=e205]:
+      - log [ref=e206]
+      - generic [ref=e209]:
+        - heading "Home" [level=1] [ref=e214]
+        - generic [ref=e216]:
+          - generic [ref=e217]:
+            - generic [ref=e218]:
+              - generic [ref=e219]: region
+              - generic [ref=e220] [cursor=pointer]:
+                - log [ref=e222]
+                - generic [ref=e223]:
+                  - generic [ref=e224]:
+                    - generic [ref=e225]: All
+                    - combobox [ref=e227]
+                  - img [ref=e229]
+            - generic [ref=e231]:
+              - generic [ref=e232]: probe
+              - generic [ref=e233] [cursor=pointer]:
+                - log [ref=e235]
+                - generic [ref=e236]:
+                  - generic [ref=e237]:
+                    - generic [ref=e238]:
+                      - generic [ref=e239]: All
+                      - button "Remove" [ref=e240]:
+                        - img [ref=e241]
+                    - combobox [ref=e244]
+                  - generic [ref=e245]:
+                    - button "Clear value" [ref=e246]
+                    - img [ref=e248]
+            - generic [ref=e250]:
+              - generic [ref=e251]: check type
+              - generic [ref=e252] [cursor=pointer]:
+                - log [ref=e254]
+                - generic [ref=e255]:
+                  - generic [ref=e256]:
+                    - generic [ref=e257]: All
+                    - combobox [ref=e259]
+                  - img [ref=e261]
+            - generic [ref=e263]:
+              - generic [ref=e264]: Filters
+              - button "Add filter" [ref=e266] [cursor=pointer]:
+                - img [ref=e267]
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - generic [ref=e271]:
+                  - text: Alert firing
+                  - generic "data-testid Loading indicator" [ref=e272]:
+                    - button [ref=e273] [cursor=pointer]
+                - generic [ref=e276]:
+                  - switch "Alert firing data-testid Loading indicator" [checked] [ref=e277]
+                  - img [ref=e279] [cursor=pointer]
+              - generic [ref=e281]:
+                - generic [ref=e282]: Alert pending
+                - generic [ref=e284]:
+                  - switch "Alert pending" [checked] [ref=e285]
+                  - img [ref=e287] [cursor=pointer]
+            - link "Create new check" [disabled]:
+              - /url: /a/grafana-synthetic-monitoring-app/checks/choose-type
+              - img
+              - generic: Create new check
+            - generic [ref=e289]:
+              - button "Move time range backwards" [ref=e290] [cursor=pointer]:
+                - img [ref=e291]
+              - 'button "Time range selected: Last 3 hours" [ref=e293] [cursor=pointer]':
+                - img [ref=e294]
+                - generic [ref=e297]:
+                  - generic [ref=e298]: Last 3 hours
+                  - generic [ref=e299]: UTC
+                - img [ref=e300]
+              - button "Move time range forwards" [ref=e302] [cursor=pointer]:
+                - img [ref=e303]
+              - button "Zoom out time range" [ref=e305] [cursor=pointer]:
+                - img [ref=e306]
+            - generic [ref=e308]:
+              - button [ref=e309] [cursor=pointer]:
+                - img [ref=e310]
+              - button "Auto refresh turned off. Choose refresh time interval" [ref=e312] [cursor=pointer]:
+                - img [ref=e313]
+          - region "All checks" [ref=e319]:
+            - generic [ref=e320]:
+              - heading "All checks" [level=2] [ref=e322]
+              - img [ref=e325]
+            - grid [ref=e328]:
+              - row "id instance job check type state reachability latency" [ref=e329]:
+                - columnheader "id" [ref=e330] [cursor=pointer]:
+                  - button "id" [ref=e332]
+                - columnheader "instance" [ref=e334] [cursor=pointer]:
+                  - button "instance" [ref=e336]
+                - columnheader "job" [ref=e338] [cursor=pointer]:
+                  - button "job" [ref=e340]
+                - columnheader "check type" [ref=e342] [cursor=pointer]:
+                  - button "check type" [ref=e344]
+                - columnheader "state" [ref=e346] [cursor=pointer]:
+                  - button "state" [ref=e348]
+                - columnheader "reachability" [ref=e350] [cursor=pointer]:
+                  - button "reachability" [ref=e352]
+                - columnheader "latency" [ref=e354] [cursor=pointer]:
+                  - button "latency" [ref=e356]
+              - row "1745867 https://appenv-grafana-play.field-eng-demo.grafana.net Validate login Browser UP 100% 4.90 s" [ref=e358]:
+                - gridcell "1745867" [ref=e359]
+                - gridcell "https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e360]:
+                  - link "https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e361] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1745867
+                - gridcell "Validate login" [ref=e362]:
+                  - link "Validate login" [ref=e363] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1745867
+                - gridcell "Browser" [ref=e364]
+                - gridcell "UP" [ref=e365]
+                - gridcell "100%" [ref=e366]
+                - gridcell "4.90 s" [ref=e367]
+              - row "1729855 sm-check browser-get-pizza Browser UP 98.5% 5.11 s" [ref=e368]:
+                - gridcell "1729855" [ref=e369]
+                - gridcell "sm-check" [ref=e370]:
+                  - link "sm-check" [ref=e371] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1729855
+                - gridcell "browser-get-pizza" [ref=e372]:
+                  - link "browser-get-pizza" [ref=e373] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1729855
+                - gridcell "Browser" [ref=e374]
+                - gridcell "UP" [ref=e375]
+                - gridcell "98.5%" [ref=e376]
+                - gridcell "5.11 s" [ref=e377]
+              - row "1758313 test test Browser UP 100% 2.93 s" [ref=e378]:
+                - gridcell "1758313" [ref=e379]
+                - gridcell "test" [ref=e380]:
+                  - link "test" [ref=e381] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1758313
+                - gridcell "test" [ref=e382]:
+                  - link "test" [ref=e383] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1758313
+                - gridcell "Browser" [ref=e384]
+                - gridcell "UP" [ref=e385]
+                - gridcell "100%" [ref=e386]
+                - gridcell "2.93 s" [ref=e387]
+              - row "1745868 appenv-grafana-play.field-eng-demo.grafana.net DNS Check DNS UP 100% 29.0 ms" [ref=e388]:
+                - gridcell "1745868" [ref=e389]
+                - gridcell "appenv-grafana-play.field-eng-demo.grafana.net" [ref=e390]:
+                  - link "appenv-grafana-play.field-eng-demo.grafana.net" [ref=e391] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1745868
+                - gridcell "DNS Check" [ref=e392]:
+                  - link "DNS Check" [ref=e393] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1745868
+                - gridcell "DNS" [ref=e394]
+                - gridcell "UP" [ref=e395]
+                - gridcell "100%" [ref=e396]
+                - gridcell "29.0 ms" [ref=e397]
+              - row "1634808 grafana.com Grafana Main Hostname DNS Resolution DNS UP 100% 5.65 ms" [ref=e398]:
+                - gridcell "1634808" [ref=e399]
+                - gridcell "grafana.com" [ref=e400]:
+                  - link "grafana.com" [ref=e401] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634808
+                - gridcell "Grafana Main Hostname DNS Resolution" [ref=e402]:
+                  - link "Grafana Main Hostname DNS Resolution" [ref=e403] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634808
+                - gridcell "DNS" [ref=e404]
+                - gridcell "UP" [ref=e405]
+                - gridcell "100%" [ref=e406]
+                - gridcell "5.65 ms" [ref=e407]
+              - row "1745869 https://appenv-grafana-play.field-eng-demo.grafana.net HTTP Check HTTP UP 100% 438 ms" [ref=e408]:
+                - gridcell "1745869" [ref=e409]
+                - gridcell "https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e410]:
+                  - link "https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e411] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1745869
+                - gridcell "HTTP Check" [ref=e412]:
+                  - link "HTTP Check" [ref=e413] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1745869
+                - gridcell "HTTP" [ref=e414]
+                - gridcell "UP" [ref=e415]
+                - gridcell "100%" [ref=e416]
+                - gridcell "438 ms" [ref=e417]
+              - row "1634807 https://community.grafana.com/ Grafana Community Forums HTTP UP 100% 515 ms" [ref=e418]:
+                - gridcell "1634807" [ref=e419]
+                - gridcell "https://community.grafana.com/" [ref=e420]:
+                  - link "https://community.grafana.com/" [ref=e421] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634807
+                - gridcell "Grafana Community Forums" [ref=e422]:
+                  - link "Grafana Community Forums" [ref=e423] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634807
+                - gridcell "HTTP" [ref=e424]
+                - gridcell "UP" [ref=e425]
+                - gridcell "100%" [ref=e426]
+                - gridcell "515 ms" [ref=e427]
+              - row "1634584 https://play.grafana.com/api/health Play Health HTTP UP 100% 422 ms" [ref=e428]:
+                - gridcell "1634584" [ref=e429]
+                - gridcell "https://play.grafana.com/api/health" [ref=e430]:
+                  - link "https://play.grafana.com/api/health" [ref=e431] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634584
+                - gridcell "Play Health" [ref=e432]:
+                  - link "Play Health" [ref=e433] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634584
+                - gridcell "HTTP" [ref=e434]
+                - gridcell "UP" [ref=e435]
+                - gridcell "100%" [ref=e436]
+                - gridcell "422 ms" [ref=e437]
+              - row "1729853 https://quickpizza.grafana.fun/ https://quickpizza.grafana.fun/ HTTP UP 100% 595 ms" [ref=e438]:
+                - gridcell "1729853" [ref=e439]
+                - gridcell "https://quickpizza.grafana.fun/" [ref=e440]:
+                  - link "https://quickpizza.grafana.fun/" [ref=e441] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1729853
+                - gridcell "https://quickpizza.grafana.fun/" [ref=e442]:
+                  - link "https://quickpizza.grafana.fun/" [ref=e443] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1729853
+                - gridcell "HTTP" [ref=e444]
+                - gridcell "UP" [ref=e445]
+                - gridcell "100%" [ref=e446]
+                - gridcell "595 ms" [ref=e447]
+              - row "1634806 https://www.grafana.com/ Grafana Home Page HTTP UP 100% 75.8 ms" [ref=e448]:
+                - gridcell "1634806" [ref=e449]
+                - gridcell "https://www.grafana.com/" [ref=e450]:
+                  - link "https://www.grafana.com/" [ref=e451] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634806
+                - gridcell "Grafana Home Page" [ref=e452]:
+                  - link "Grafana Home Page" [ref=e453] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634806
+                - gridcell "HTTP" [ref=e454]
+                - gridcell "UP" [ref=e455]
+                - gridcell "100%" [ref=e456]
+                - gridcell "75.8 ms" [ref=e457]
+              - row "1745864 https://appenv-grafana-play.field-eng-demo.grafana.net MultiHTTP Complex Check multihttp UP 100% 1.27 s" [ref=e458]:
+                - gridcell "1745864" [ref=e459]
+                - gridcell "https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e460]:
+                  - link "https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e461] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1745864
+                - gridcell "MultiHTTP Complex Check" [ref=e462]:
+                  - link "MultiHTTP Complex Check" [ref=e463] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1745864
+                - gridcell "multihttp" [ref=e464]
+                - gridcell "UP" [ref=e465]
+                - gridcell "100%" [ref=e466]
+                - gridcell "1.27 s" [ref=e467]
+              - 'row "1634870 https://play.grafana.com/api/search Multi HTTP Check: Play Search API multihttp UP 100% 247 ms" [ref=e468]':
+                - gridcell "1634870" [ref=e469]
+                - gridcell "https://play.grafana.com/api/search" [ref=e470]:
+                  - link "https://play.grafana.com/api/search" [ref=e471] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634870
+                - 'gridcell "Multi HTTP Check: Play Search API" [ref=e472]':
+                  - 'link "Multi HTTP Check: Play Search API" [ref=e473] [cursor=pointer]':
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634870
+                - gridcell "multihttp" [ref=e474]
+                - gridcell "UP" [ref=e475]
+                - gridcell "100%" [ref=e476]
+                - gridcell "247 ms" [ref=e477]
+              - row "1634809 grafana.com Grafana Ping Check PING UP 100% 5.96 ms" [ref=e478]:
+                - gridcell "1634809" [ref=e479]
+                - gridcell "grafana.com" [ref=e480]:
+                  - link "grafana.com" [ref=e481] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634809
+                - gridcell "Grafana Ping Check" [ref=e482]:
+                  - link "Grafana Ping Check" [ref=e483] [cursor=pointer]:
+                    - /url: /a/grafana-synthetic-monitoring-app/checks/1634809
+                - gridcell "PING" [ref=e484]
+                - gridcell "UP" [ref=e485]
+                - gridcell "100%" [ref=e486]
+                - gridcell "5.96 ms" [ref=e487]
+          - generic [ref=e488]:
+            - region "All error rate by location" [ref=e492]:
+              - heading "All error rate by location" [level=2] [ref=e495]
+              - generic [ref=e497]:
+                - application "Navigable map" [ref=e498]:
+                  - generic [ref=e499]:
+                    - generic:
+                      - generic [ref=e504]:
+                        - button "+" [ref=e505] [cursor=pointer]
+                        - button "–" [ref=e506] [cursor=pointer]
+                      - button "i" [ref=e508] [cursor=pointer]
+                - generic [ref=e511]:
+                  - generic [ref=e512]: Error rate
+                  - generic [ref=e513]:
+                    - generic [ref=e514]: < 1.00%
+                    - generic [ref=e516]: 1.00%+
+                    - generic [ref=e518]: 1.50%+
+            - region "All check error percentage" [ref=e523]:
+              - heading "All check error percentage" [level=2] [ref=e526]
+              - table [ref=e542]:
+                - rowgroup [ref=e543]:
+                  - row "Name" [ref=e544]:
+                    - columnheader "Name" [ref=e545] [cursor=pointer]
+                - rowgroup [ref=e546]:
+                  - row "Edit color for TCP Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net:80 TCP Check/appenv-grafana-play.field-eng-demo.grafana.net:80" [ref=e547]:
+                    - cell "Edit color for TCP Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net:80 TCP Check/appenv-grafana-play.field-eng-demo.grafana.net:80" [ref=e548]:
+                      - generic [ref=e549]:
+                        - button "Edit color for TCP Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net:80" [ref=e550] [cursor=pointer]
+                        - button "TCP Check/appenv-grafana-play.field-eng-demo.grafana.net:80" [ref=e551] [cursor=pointer]
+                  - row "Edit color for DNS Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net DNS Check/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e552]:
+                    - cell "Edit color for DNS Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net DNS Check/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e553]:
+                      - generic [ref=e554]:
+                        - button "Edit color for DNS Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net" [ref=e555] [cursor=pointer]
+                        - button "DNS Check/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e556] [cursor=pointer]
+                  - row "Edit color for Validate homepage&#x2F;appenv-grafana-play.field-eng-demo.grafana.net Validate homepage/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e557]:
+                    - cell "Edit color for Validate homepage&#x2F;appenv-grafana-play.field-eng-demo.grafana.net Validate homepage/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e558]:
+                      - generic [ref=e559]:
+                        - button "Edit color for Validate homepage&#x2F;appenv-grafana-play.field-eng-demo.grafana.net" [ref=e560] [cursor=pointer]
+                        - button "Validate homepage/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e561] [cursor=pointer]
+                  - row "Edit color for Grafana Main Hostname DNS Resolution&#x2F;grafana.com Grafana Main Hostname DNS Resolution/grafana.com" [ref=e562]:
+                    - cell "Edit color for Grafana Main Hostname DNS Resolution&#x2F;grafana.com Grafana Main Hostname DNS Resolution/grafana.com" [ref=e563]:
+                      - generic [ref=e564]:
+                        - button "Edit color for Grafana Main Hostname DNS Resolution&#x2F;grafana.com" [ref=e565] [cursor=pointer]
+                        - button "Grafana Main Hostname DNS Resolution/grafana.com" [ref=e566] [cursor=pointer]
+                  - row "Edit color for Grafana Ping Check&#x2F;grafana.com Grafana Ping Check/grafana.com" [ref=e567]:
+                    - cell "Edit color for Grafana Ping Check&#x2F;grafana.com Grafana Ping Check/grafana.com" [ref=e568]:
+                      - generic [ref=e569]:
+                        - button "Edit color for Grafana Ping Check&#x2F;grafana.com" [ref=e570] [cursor=pointer]
+                        - button "Grafana Ping Check/grafana.com" [ref=e571] [cursor=pointer]
+                  - row "Edit color for Ping Check&#x2F;grafana.com Ping Check/grafana.com" [ref=e572]:
+                    - cell "Edit color for Ping Check&#x2F;grafana.com Ping Check/grafana.com" [ref=e573]:
+                      - generic [ref=e574]:
+                        - button "Edit color for Ping Check&#x2F;grafana.com" [ref=e575] [cursor=pointer]
+                        - button "Ping Check/grafana.com" [ref=e576] [cursor=pointer]
+                  - row "Edit color for Traceroute Check&#x2F;grafana.com Traceroute Check/grafana.com" [ref=e577]:
+                    - cell "Edit color for Traceroute Check&#x2F;grafana.com Traceroute Check/grafana.com" [ref=e578]:
+                      - generic [ref=e579]:
+                        - button "Edit color for Traceroute Check&#x2F;grafana.com" [ref=e580] [cursor=pointer]
+                        - button "Traceroute Check/grafana.com" [ref=e581] [cursor=pointer]
+                  - row "Edit color for Traceroute to Grafana.com&#x2F;grafana.com Traceroute to Grafana.com/grafana.com" [ref=e582]:
+                    - cell "Edit color for Traceroute to Grafana.com&#x2F;grafana.com Traceroute to Grafana.com/grafana.com" [ref=e583]:
+                      - generic [ref=e584]:
+                        - button "Edit color for Traceroute to Grafana.com&#x2F;grafana.com" [ref=e585] [cursor=pointer]
+                        - button "Traceroute to Grafana.com/grafana.com" [ref=e586] [cursor=pointer]
+                  - row "Edit color for HTTP Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net HTTP Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e587]:
+                    - cell "Edit color for HTTP Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net HTTP Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e588]:
+                      - generic [ref=e589]:
+                        - button "Edit color for HTTP Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net" [ref=e590] [cursor=pointer]
+                        - button "HTTP Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e591] [cursor=pointer]
+                  - row "Edit color for MultiHTTP Complex Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net MultiHTTP Complex Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e592]:
+                    - cell "Edit color for MultiHTTP Complex Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net MultiHTTP Complex Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e593]:
+                      - generic [ref=e594]:
+                        - button "Edit color for MultiHTTP Complex Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net" [ref=e595] [cursor=pointer]
+                        - button "MultiHTTP Complex Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e596] [cursor=pointer]
+                  - row "Edit color for Validate login&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net Validate login/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e597]:
+                    - cell "Edit color for Validate login&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net Validate login/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e598]:
+                      - generic [ref=e599]:
+                        - button "Edit color for Validate login&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net" [ref=e600] [cursor=pointer]
+                        - button "Validate login/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e601] [cursor=pointer]
+                  - row "Edit color for Grafana Community Forums&#x2F;https:&#x2F;&#x2F;community.grafana.com&#x2F; Grafana Community Forums/https://community.grafana.com/" [ref=e602]:
+                    - cell "Edit color for Grafana Community Forums&#x2F;https:&#x2F;&#x2F;community.grafana.com&#x2F; Grafana Community Forums/https://community.grafana.com/" [ref=e603]:
+                      - generic [ref=e604]:
+                        - button "Edit color for Grafana Community Forums&#x2F;https:&#x2F;&#x2F;community.grafana.com&#x2F;" [ref=e605] [cursor=pointer]
+                        - button "Grafana Community Forums/https://community.grafana.com/" [ref=e606] [cursor=pointer]
+                  - row "Edit color for Play Health&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;health Play Health/https://play.grafana.com/api/health" [ref=e607]:
+                    - cell "Edit color for Play Health&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;health Play Health/https://play.grafana.com/api/health" [ref=e608]:
+                      - generic [ref=e609]:
+                        - button "Edit color for Play Health&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;health" [ref=e610] [cursor=pointer]
+                        - button "Play Health/https://play.grafana.com/api/health" [ref=e611] [cursor=pointer]
+                  - 'row "Edit color for Multi HTTP Check: Play Search API&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;search Multi HTTP Check: Play Search API/https://play.grafana.com/api/search" [ref=e612]':
+                    - 'cell "Edit color for Multi HTTP Check: Play Search API&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;search Multi HTTP Check: Play Search API/https://play.grafana.com/api/search" [ref=e613]':
+                      - generic [ref=e614]:
+                        - 'button "Edit color for Multi HTTP Check: Play Search API&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;search" [ref=e615] [cursor=pointer]'
+                        - 'button "Multi HTTP Check: Play Search API/https://play.grafana.com/api/search" [ref=e616] [cursor=pointer]'
+                  - row "Edit color for https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F;&#x2F;https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F; https://quickpizza.grafana.fun//https://quickpizza.grafana.fun/" [ref=e617]:
+                    - cell "Edit color for https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F;&#x2F;https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F; https://quickpizza.grafana.fun//https://quickpizza.grafana.fun/" [ref=e618]:
+                      - generic [ref=e619]:
+                        - button "Edit color for https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F;&#x2F;https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F;" [ref=e620] [cursor=pointer]
+                        - button "https://quickpizza.grafana.fun//https://quickpizza.grafana.fun/" [ref=e621] [cursor=pointer]
+                  - row "Edit color for Grafana Home Page&#x2F;https:&#x2F;&#x2F;www.grafana.com&#x2F; Grafana Home Page/https://www.grafana.com/" [ref=e622]:
+                    - cell "Edit color for Grafana Home Page&#x2F;https:&#x2F;&#x2F;www.grafana.com&#x2F; Grafana Home Page/https://www.grafana.com/" [ref=e623]:
+                      - generic [ref=e624]:
+                        - button "Edit color for Grafana Home Page&#x2F;https:&#x2F;&#x2F;www.grafana.com&#x2F;" [ref=e625] [cursor=pointer]
+                        - button "Grafana Home Page/https://www.grafana.com/" [ref=e626] [cursor=pointer]
+                  - row "Edit color for K6 Authentication&#x2F;play K6 Authentication/play" [ref=e627]:
+                    - cell "Edit color for K6 Authentication&#x2F;play K6 Authentication/play" [ref=e628]:
+                      - generic [ref=e629]:
+                        - button "Edit color for K6 Authentication&#x2F;play" [ref=e630] [cursor=pointer]
+                        - button "K6 Authentication/play" [ref=e631] [cursor=pointer]
+                  - row "Edit color for api-get-pizza&#x2F;sm-check api-get-pizza/sm-check" [ref=e632]:
+                    - cell "Edit color for api-get-pizza&#x2F;sm-check api-get-pizza/sm-check" [ref=e633]:
+                      - generic [ref=e634]:
+                        - button "Edit color for api-get-pizza&#x2F;sm-check" [ref=e635] [cursor=pointer]
+                        - button "api-get-pizza/sm-check" [ref=e636] [cursor=pointer]
+                  - row "Edit color for browser-get-pizza&#x2F;sm-check browser-get-pizza/sm-check" [ref=e637]:
+                    - cell "Edit color for browser-get-pizza&#x2F;sm-check browser-get-pizza/sm-check" [ref=e638]:
+                      - generic [ref=e639]:
+                        - button "Edit color for browser-get-pizza&#x2F;sm-check" [ref=e640] [cursor=pointer]
+                        - button "browser-get-pizza/sm-check" [ref=e641] [cursor=pointer]
+                  - row "Edit color for test&#x2F;test test/test" [ref=e642]:
+                    - cell "Edit color for test&#x2F;test test/test" [ref=e643]:
+                      - generic [ref=e644]:
+                        - button "Edit color for test&#x2F;test" [ref=e645] [cursor=pointer]
+                        - button "test/test" [ref=e646] [cursor=pointer]
+          - region "All latency" [ref=e651]:
+            - heading "All latency" [level=2] [ref=e654]
+            - table [ref=e670]:
+              - rowgroup [ref=e671]:
+                - row "Name" [ref=e672]:
+                  - columnheader "Name" [ref=e673] [cursor=pointer]
+              - rowgroup [ref=e674]:
+                - row "Edit color for TCP Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net:80 TCP Check/appenv-grafana-play.field-eng-demo.grafana.net:80" [ref=e675]:
+                  - cell "Edit color for TCP Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net:80 TCP Check/appenv-grafana-play.field-eng-demo.grafana.net:80" [ref=e676]:
+                    - generic [ref=e677]:
+                      - button "Edit color for TCP Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net:80" [ref=e678] [cursor=pointer]
+                      - button "TCP Check/appenv-grafana-play.field-eng-demo.grafana.net:80" [ref=e679] [cursor=pointer]
+                - row "Edit color for DNS Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net DNS Check/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e680]:
+                  - cell "Edit color for DNS Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net DNS Check/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e681]:
+                    - generic [ref=e682]:
+                      - button "Edit color for DNS Check&#x2F;appenv-grafana-play.field-eng-demo.grafana.net" [ref=e683] [cursor=pointer]
+                      - button "DNS Check/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e684] [cursor=pointer]
+                - row "Edit color for Validate homepage&#x2F;appenv-grafana-play.field-eng-demo.grafana.net Validate homepage/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e685]:
+                  - cell "Edit color for Validate homepage&#x2F;appenv-grafana-play.field-eng-demo.grafana.net Validate homepage/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e686]:
+                    - generic [ref=e687]:
+                      - button "Edit color for Validate homepage&#x2F;appenv-grafana-play.field-eng-demo.grafana.net" [ref=e688] [cursor=pointer]
+                      - button "Validate homepage/appenv-grafana-play.field-eng-demo.grafana.net" [ref=e689] [cursor=pointer]
+                - row "Edit color for Grafana Main Hostname DNS Resolution&#x2F;grafana.com Grafana Main Hostname DNS Resolution/grafana.com" [ref=e690]:
+                  - cell "Edit color for Grafana Main Hostname DNS Resolution&#x2F;grafana.com Grafana Main Hostname DNS Resolution/grafana.com" [ref=e691]:
+                    - generic [ref=e692]:
+                      - button "Edit color for Grafana Main Hostname DNS Resolution&#x2F;grafana.com" [ref=e693] [cursor=pointer]
+                      - button "Grafana Main Hostname DNS Resolution/grafana.com" [ref=e694] [cursor=pointer]
+                - row "Edit color for Grafana Ping Check&#x2F;grafana.com Grafana Ping Check/grafana.com" [ref=e695]:
+                  - cell "Edit color for Grafana Ping Check&#x2F;grafana.com Grafana Ping Check/grafana.com" [ref=e696]:
+                    - generic [ref=e697]:
+                      - button "Edit color for Grafana Ping Check&#x2F;grafana.com" [ref=e698] [cursor=pointer]
+                      - button "Grafana Ping Check/grafana.com" [ref=e699] [cursor=pointer]
+                - row "Edit color for Ping Check&#x2F;grafana.com Ping Check/grafana.com" [ref=e700]:
+                  - cell "Edit color for Ping Check&#x2F;grafana.com Ping Check/grafana.com" [ref=e701]:
+                    - generic [ref=e702]:
+                      - button "Edit color for Ping Check&#x2F;grafana.com" [ref=e703] [cursor=pointer]
+                      - button "Ping Check/grafana.com" [ref=e704] [cursor=pointer]
+                - row "Edit color for Traceroute Check&#x2F;grafana.com Traceroute Check/grafana.com" [ref=e705]:
+                  - cell "Edit color for Traceroute Check&#x2F;grafana.com Traceroute Check/grafana.com" [ref=e706]:
+                    - generic [ref=e707]:
+                      - button "Edit color for Traceroute Check&#x2F;grafana.com" [ref=e708] [cursor=pointer]
+                      - button "Traceroute Check/grafana.com" [ref=e709] [cursor=pointer]
+                - row "Edit color for Traceroute to Grafana.com&#x2F;grafana.com Traceroute to Grafana.com/grafana.com" [ref=e710]:
+                  - cell "Edit color for Traceroute to Grafana.com&#x2F;grafana.com Traceroute to Grafana.com/grafana.com" [ref=e711]:
+                    - generic [ref=e712]:
+                      - button "Edit color for Traceroute to Grafana.com&#x2F;grafana.com" [ref=e713] [cursor=pointer]
+                      - button "Traceroute to Grafana.com/grafana.com" [ref=e714] [cursor=pointer]
+                - row "Edit color for HTTP Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net HTTP Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e715]:
+                  - cell "Edit color for HTTP Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net HTTP Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e716]:
+                    - generic [ref=e717]:
+                      - button "Edit color for HTTP Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net" [ref=e718] [cursor=pointer]
+                      - button "HTTP Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e719] [cursor=pointer]
+                - row "Edit color for MultiHTTP Complex Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net MultiHTTP Complex Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e720]:
+                  - cell "Edit color for MultiHTTP Complex Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net MultiHTTP Complex Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e721]:
+                    - generic [ref=e722]:
+                      - button "Edit color for MultiHTTP Complex Check&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net" [ref=e723] [cursor=pointer]
+                      - button "MultiHTTP Complex Check/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e724] [cursor=pointer]
+                - row "Edit color for Validate login&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net Validate login/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e725]:
+                  - cell "Edit color for Validate login&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net Validate login/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e726]:
+                    - generic [ref=e727]:
+                      - button "Edit color for Validate login&#x2F;https:&#x2F;&#x2F;appenv-grafana-play.field-eng-demo.grafana.net" [ref=e728] [cursor=pointer]
+                      - button "Validate login/https://appenv-grafana-play.field-eng-demo.grafana.net" [ref=e729] [cursor=pointer]
+                - row "Edit color for Grafana Community Forums&#x2F;https:&#x2F;&#x2F;community.grafana.com&#x2F; Grafana Community Forums/https://community.grafana.com/" [ref=e730]:
+                  - cell "Edit color for Grafana Community Forums&#x2F;https:&#x2F;&#x2F;community.grafana.com&#x2F; Grafana Community Forums/https://community.grafana.com/" [ref=e731]:
+                    - generic [ref=e732]:
+                      - button "Edit color for Grafana Community Forums&#x2F;https:&#x2F;&#x2F;community.grafana.com&#x2F;" [ref=e733] [cursor=pointer]
+                      - button "Grafana Community Forums/https://community.grafana.com/" [ref=e734] [cursor=pointer]
+                - row "Edit color for Play Health&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;health Play Health/https://play.grafana.com/api/health" [ref=e735]:
+                  - cell "Edit color for Play Health&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;health Play Health/https://play.grafana.com/api/health" [ref=e736]:
+                    - generic [ref=e737]:
+                      - button "Edit color for Play Health&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;health" [ref=e738] [cursor=pointer]
+                      - button "Play Health/https://play.grafana.com/api/health" [ref=e739] [cursor=pointer]
+                - 'row "Edit color for Multi HTTP Check: Play Search API&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;search Multi HTTP Check: Play Search API/https://play.grafana.com/api/search" [ref=e740]':
+                  - 'cell "Edit color for Multi HTTP Check: Play Search API&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;search Multi HTTP Check: Play Search API/https://play.grafana.com/api/search" [ref=e741]':
+                    - generic [ref=e742]:
+                      - 'button "Edit color for Multi HTTP Check: Play Search API&#x2F;https:&#x2F;&#x2F;play.grafana.com&#x2F;api&#x2F;search" [ref=e743] [cursor=pointer]'
+                      - 'button "Multi HTTP Check: Play Search API/https://play.grafana.com/api/search" [ref=e744] [cursor=pointer]'
+                - row "Edit color for https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F;&#x2F;https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F; https://quickpizza.grafana.fun//https://quickpizza.grafana.fun/" [ref=e745]:
+                  - cell "Edit color for https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F;&#x2F;https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F; https://quickpizza.grafana.fun//https://quickpizza.grafana.fun/" [ref=e746]:
+                    - generic [ref=e747]:
+                      - button "Edit color for https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F;&#x2F;https:&#x2F;&#x2F;quickpizza.grafana.fun&#x2F;" [ref=e748] [cursor=pointer]
+                      - button "https://quickpizza.grafana.fun//https://quickpizza.grafana.fun/" [ref=e749] [cursor=pointer]
+                - row "Edit color for Grafana Home Page&#x2F;https:&#x2F;&#x2F;www.grafana.com&#x2F; Grafana Home Page/https://www.grafana.com/" [ref=e750]:
+                  - cell "Edit color for Grafana Home Page&#x2F;https:&#x2F;&#x2F;www.grafana.com&#x2F; Grafana Home Page/https://www.grafana.com/" [ref=e751]:
+                    - generic [ref=e752]:
+                      - button "Edit color for Grafana Home Page&#x2F;https:&#x2F;&#x2F;www.grafana.com&#x2F;" [ref=e753] [cursor=pointer]
+                      - button "Grafana Home Page/https://www.grafana.com/" [ref=e754] [cursor=pointer]
+                - row "Edit color for K6 Authentication&#x2F;play K6 Authentication/play" [ref=e755]:
+                  - cell "Edit color for K6 Authentication&#x2F;play K6 Authentication/play" [ref=e756]:
+                    - generic [ref=e757]:
+                      - button "Edit color for K6 Authentication&#x2F;play" [ref=e758] [cursor=pointer]
+                      - button "K6 Authentication/play" [ref=e759] [cursor=pointer]
+                - row "Edit color for api-get-pizza&#x2F;sm-check api-get-pizza/sm-check" [ref=e760]:
+                  - cell "Edit color for api-get-pizza&#x2F;sm-check api-get-pizza/sm-check" [ref=e761]:
+                    - generic [ref=e762]:
+                      - button "Edit color for api-get-pizza&#x2F;sm-check" [ref=e763] [cursor=pointer]
+                      - button "api-get-pizza/sm-check" [ref=e764] [cursor=pointer]
+                - row "Edit color for browser-get-pizza&#x2F;sm-check browser-get-pizza/sm-check" [ref=e765]:
+                  - cell "Edit color for browser-get-pizza&#x2F;sm-check browser-get-pizza/sm-check" [ref=e766]:
+                    - generic [ref=e767]:
+                      - button "Edit color for browser-get-pizza&#x2F;sm-check" [ref=e768] [cursor=pointer]
+                      - button "browser-get-pizza/sm-check" [ref=e769] [cursor=pointer]
+                - row "Edit color for test&#x2F;test test/test" [ref=e770]:
+                  - cell "Edit color for test&#x2F;test test/test" [ref=e771]:
+                    - generic [ref=e772]:
+                      - button "Edit color for test&#x2F;test" [ref=e773] [cursor=pointer]
+                      - button "test/test" [ref=e774] [cursor=pointer]
+  - iframe [ref=e775]:
+    
+```

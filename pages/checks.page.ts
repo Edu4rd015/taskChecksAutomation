@@ -7,9 +7,6 @@ export class ChecksPage {
     this.page = page;
   }
 
-  // NOTE:
-  // These locators are intentionally written in a resilient style,
-  // but should be finalized after inspecting the real DOM.
   get pageHeading(): Locator {
     return this.page.getByRole('heading').first();
   }

@@ -1,21 +1,10 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="64.34416700000001">
-<testsuite name="checks.spec.ts" timestamp="2026-04-01T21:27:59.271Z" hostname="chromium" tests="3" failures="0" skipped="0" time="106.738" errors="0">
-<testcase name="Grafana Synthetic Monitoring demo › a) Filtering Checks by Location" classname="checks.spec.ts" time="49.917">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|checks-Grafana-Synthetic-M-4e9e1-iltering-Checks-by-Location-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|checks-Grafana-Synthetic-M-4e9e1-iltering-Checks-by-Location-chromium\video.webm]]
-
-[[ATTACHMENT|checks-Grafana-Synthetic-M-4e9e1-iltering-Checks-by-Location-chromium\error-context.md]]
-
-[[ATTACHMENT|checks-Grafana-Synthetic-M-4e9e1-iltering-Checks-by-Location-chromium-retry1\trace.zip]]
-]]>
-</system-out>
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="56.497551">
+<testsuite name="checks.spec.ts" timestamp="2026-04-02T21:39:41.029Z" hostname="chromium" tests="3" failures="0" skipped="0" time="136.81" errors="0">
+<testcase name="Grafana Synthetic Monitoring demo › a) Filtering Checks by Location" classname="checks.spec.ts" time="45.188">
 </testcase>
-<testcase name="Grafana Synthetic Monitoring demo › b) Viewing Check Details" classname="checks.spec.ts" time="28.073">
+<testcase name="Grafana Synthetic Monitoring demo › b) Viewing Check Details" classname="checks.spec.ts" time="44.175">
 </testcase>
-<testcase name="Grafana Synthetic Monitoring demo › c) Handling No Data Scenario" classname="checks.spec.ts" time="28.748">
+<testcase name="Grafana Synthetic Monitoring demo › c) Handling No Data Scenario" classname="checks.spec.ts" time="47.447">
 </testcase>
 </testsuite>
 </testsuites>

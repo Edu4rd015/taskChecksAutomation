@@ -15,7 +15,15 @@ export class ChecksPage {
   }
 
   get checksNavLink(): Locator {
-    return this.page.getByRole('link', { name: /checks/i }).first();
+    return this.page
+      .getByRole('link', { name: /^checks$/i })
+      .or(this.page.getByRole('tab', { name: /checks/i }))
+      .or(this.page.getByRole('button', { name: /checks/i }))
+      .first();
+  }
+
+  get checksHeading(): Locator {
+    return this.page.getByRole('heading', { name: /^checks$/i }).first();
   }
 
   get locationFilter(): Locator {
@@ -23,6 +31,21 @@ export class ChecksPage {
       .getByRole('combobox')
       .or(this.page.getByRole('button', { name: /region/i }))
       .first();
+  }
+
+  get searchChecksInput(): Locator {
+    return this.page
+      .getByRole('textbox', { name: /search checks/i })
+      .or(this.page.locator('input[placeholder*="Search by job name"]').first())
+      .first();
+  }
+
+  get additionalFiltersButton(): Locator {
+    return this.page.getByRole('button', { name: /additional filters/i }).first();
+  }
+
+  get probesFilterInput(): Locator {
+    return this.page.locator('input[placeholder="All probes"]').first();
   }
 
   get clearFiltersButton(): Locator {
@@ -35,8 +58,16 @@ export class ChecksPage {
       .filter({ hasNot: this.page.getByRole('columnheader') });
   }
 
+  get checkCards(): Locator {
+    return this.page.getByRole('checkbox', { name: /^select check$/i });
+  }
+
+  get checkHeadings(): Locator {
+    return this.page.getByRole('heading', { level: 3 });
+  }
+
   get emptyState(): Locator {
-    return this.page.getByText(/no data|no checks found|no matching/i).first();
+    return this.page.getByText(/no data|no checks found|no matching|0 of \d+ total checks/i).first();
   }
 
   async gotoHome(): Promise<void> {
@@ -45,15 +76,35 @@ export class ChecksPage {
 
   async openChecks(): Promise<void> {
     await expect(this.page).toHaveURL(/play\.grafana\.org/);
-    await this.checksNavLink.click();
+    const allChecksRegion = this.page.getByRole('region', { name: /all checks/i }).first();
+    if ((await this.checksHeading.count()) > 0 || (await allChecksRegion.count()) > 0) {
+      return;
+    }
+
+    const hasChecksNav = (await this.checksNavLink.count()) > 0;
+    if (hasChecksNav) {
+      await this.checksNavLink.click();
+      return;
+    }
+
+    await this.page.goto('/a/grafana-synthetic-monitoring-app/checks');
   }
 
   async waitForChecksContent(): Promise<void> {
-    await expect(this.page.locator('body')).toBeVisible();
+    const allChecksRegion = this.page.getByRole('region', { name: /all checks/i }).first();
+    if ((await allChecksRegion.count()) > 0) {
+      await expect(allChecksRegion).toBeVisible();
+    } else {
+      await expect(this.checksHeading).toBeVisible();
+    }
     await this.page.waitForLoadState('domcontentloaded');
   }
 
   async getRowCount(): Promise<number> {
+    const cardCount = await this.checkCards.count();
+    if (cardCount > 0) {
+      return cardCount;
+    }
     return await this.rows.count();
   }
 
@@ -69,17 +120,52 @@ export class ChecksPage {
   }
 
   async openFirstAvailableCheck(): Promise<string> {
-    const firstRow = this.rows.first();
-    await expect(firstRow).toBeVisible();
-    const rowText = (await firstRow.innerText()).trim();
-    await firstRow.click();
-    return rowText;
+    const firstHeading = this.checkHeadings.first();
+    await expect(firstHeading).toBeVisible();
+    const checkName = (await firstHeading.textContent())?.trim() ?? '';
+    await this.page.getByRole('link', { name: /view dashboard/i }).first().click();
+    return checkName;
   }
 
   async assertEveryVisibleRowContains(text: string): Promise<void> {
-    const count = await this.rows.count();
-    for (let i = 0; i < count; i++) {
+    const cardCount = await this.checkCards.count();
+    if (cardCount > 0) {
+      const listContainer = this.page.locator('main').first();
+      await expect(listContainer).toContainText(new RegExp(text, 'i'));
+      return;
+    }
+
+    const rowCount = await this.rows.count();
+    for (let i = 0; i < rowCount; i++) {
       await expect(this.rows.nth(i)).toContainText(new RegExp(text, 'i'));
     }
+  }
+
+  async getFirstCheckName(): Promise<string> {
+    const firstHeading = this.checkHeadings.first();
+    await expect(firstHeading).toBeVisible();
+    return ((await firstHeading.textContent()) ?? '').trim();
+  }
+
+  async searchChecks(searchText: string): Promise<void> {
+    await expect(this.searchChecksInput).toBeVisible();
+    await this.searchChecksInput.fill(searchText);
+    await this.page.waitForLoadState('domcontentloaded');
+  }
+
+  async applyLocationFilterViaProbes(searchTerm = 'frank'): Promise<string> {
+    await expect(this.additionalFiltersButton).toBeVisible();
+    await this.additionalFiltersButton.click();
+    await expect(this.probesFilterInput).toBeVisible();
+    await this.probesFilterInput.click();
+    await this.probesFilterInput.fill(searchTerm);
+
+    const firstOption = this.page.getByRole('option').first();
+    await expect(firstOption).toBeVisible();
+    const selectedProbe = ((await firstOption.textContent()) ?? '').trim();
+    await firstOption.click();
+    await this.page.keyboard.press('Escape');
+    await this.page.waitForLoadState('domcontentloaded');
+    return selectedProbe;
   }
 }

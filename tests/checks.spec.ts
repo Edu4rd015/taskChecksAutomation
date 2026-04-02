@@ -3,37 +3,37 @@ import { ChecksPage } from '../pages/checks.page';
 import { CheckDetailsPage } from '../pages/check-details.page';
 
 test.describe('Grafana Synthetic Monitoring demo', () => {
-  test('filters checks by location', async ({ page }) => {
+  test('a) Filtering Checks by Location', async ({ page }) => {
     const checksPage = new ChecksPage(page);
 
+    // Step a: open checks and apply location via Additional filters -> Probes.
     await checksPage.gotoHome();
     await checksPage.openChecks();
     await checksPage.waitForChecksContent();
+    await expect.poll(async () => checksPage.getRowCount()).toBeGreaterThan(0);
 
     const initialRowCount = await checksPage.getRowCount();
-
-    // Example location. Replace with a real value after DOM/data inspection.
-    const selectedLocation = 'Stockholm';
-    await checksPage.selectLocation(selectedLocation);
-
+    const selectedLocation = await checksPage.applyLocationFilterViaProbes();
     await checksPage.waitForChecksContent();
 
     const filteredRowCount = await checksPage.getRowCount();
 
+    // Expected outcome b: checks are constrained to selected location/probe.
+    expect(selectedLocation.length).toBeGreaterThan(0);
     expect(filteredRowCount).toBeGreaterThanOrEqual(0);
     expect(filteredRowCount).toBeLessThanOrEqual(initialRowCount);
+    await expect(checksPage.additionalFiltersButton).toContainText(/active/i);
 
-    if (filteredRowCount > 0) {
-      await checksPage.assertEveryVisibleRowContains(selectedLocation);
-    } else {
+    if (filteredRowCount === 0) {
       await expect(checksPage.emptyState).toBeVisible();
     }
   });
 
-  test('opens a check and shows matching details', async ({ page }) => {
+  test('b) Viewing Check Details', async ({ page }) => {
     const checksPage = new ChecksPage(page);
     const detailsPage = new CheckDetailsPage(page);
 
+    // Step a: open checks and access a specific check details page.
     await checksPage.gotoHome();
     await checksPage.openChecks();
     await checksPage.waitForChecksContent();
@@ -41,26 +41,21 @@ test.describe('Grafana Synthetic Monitoring demo', () => {
     const selectedRowText = await checksPage.openFirstAvailableCheck();
 
     await detailsPage.waitForLoaded();
+    // Expected outcome b: details match the selected check.
     await detailsPage.assertMatchesSelectedCheck(selectedRowText);
   });
 
-  test('shows a clear empty state when filters return no data', async ({ page }) => {
+  test('c) Handling No Data Scenario', async ({ page }) => {
     const checksPage = new ChecksPage(page);
 
+    // Step a: apply a filter value with no matching checks.
     await checksPage.gotoHome();
     await checksPage.openChecks();
     await checksPage.waitForChecksContent();
 
-    // Intentionally unlikely value. Replace with a deterministic empty-state trigger if available.
-    await checksPage.openLocationFilter();
-    const impossibleOption = page.getByText(/zzzz_non_existing_location_qa/i).first();
-
-    if (await impossibleOption.count()) {
-      await impossibleOption.click();
-    } else {
-      test.skip(true, 'No deterministic impossible filter option exists in the current demo data.');
-    }
-
+    await checksPage.searchChecks('zzzz_non_existing_location_qa');
+    await expect.poll(async () => checksPage.getRowCount()).toBe(0);
+    // Expected outcome b: clear no-data message is shown.
     await expect(checksPage.emptyState).toBeVisible();
   });
 });

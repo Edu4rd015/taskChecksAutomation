@@ -5,6 +5,8 @@ import { CheckDetailsPage } from '../pages/check-details.page';
 const POST_TEST_HOLD_MS = 5000;
 
 test.describe('Grafana Synthetic Monitoring demo', () => {
+  // Small pause after each test keeps the run easier to observe in headed mode
+  // and gives the app a moment to settle before the next scenario starts.
   test.afterEach(async ({ page }) => {
     await page.waitForTimeout(POST_TEST_HOLD_MS);
   });
@@ -12,12 +14,15 @@ test.describe('Grafana Synthetic Monitoring demo', () => {
   test('a) Filtering Checks by Location', async ({ page }) => {
     const checksPage = new ChecksPage(page);
 
-    // Step a: open checks and apply location via Additional filters -> Probes.
+    // Flow: open the Checks page and wait until at least one row is available.
+    // This gives us a reliable baseline before applying filters.
     await checksPage.gotoHome();
     await checksPage.openChecks();
     await checksPage.waitForChecksContent();
     await expect.poll(async () => checksPage.getRowCount()).toBeGreaterThan(0);
 
+    // Flow: apply a probe/location filter and compare row counts before vs after.
+    // The list may shrink to zero if no checks match the selected location.
     const initialRowCount = await checksPage.getRowCount();
     const selectedLocation = await checksPage.applyLocationFilterViaProbes();
     await checksPage.waitForChecksContent();
@@ -39,7 +44,8 @@ test.describe('Grafana Synthetic Monitoring demo', () => {
     const checksPage = new ChecksPage(page);
     const detailsPage = new CheckDetailsPage(page);
 
-    // Step a: open checks and access a specific check details page.
+    // Flow: open the list page, select one concrete check, then verify
+    // the details view represents that same selected check.
     await checksPage.gotoHome();
     await checksPage.openChecks();
     await checksPage.waitForChecksContent();
@@ -54,7 +60,8 @@ test.describe('Grafana Synthetic Monitoring demo', () => {
   test('c) Handling No Data Scenario', async ({ page }) => {
     const checksPage = new ChecksPage(page);
 
-    // Step a: apply a filter value with no matching checks.
+    // Flow: use an intentionally impossible search term to force the empty state
+    // and assert that users get a clear "no data" experience.
     await checksPage.gotoHome();
     await checksPage.openChecks();
     await checksPage.waitForChecksContent();

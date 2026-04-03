@@ -2,32 +2,14 @@ import { expect, Locator, Page } from '@playwright/test';
 
 export class ChecksPage {
   readonly page: Page;
+  private readonly checksPathPattern = /\/a\/grafana-synthetic-monitoring-app\/checks(?:\/|$|\?)/;
 
   constructor(page: Page) {
     this.page = page;
   }
 
-  get pageHeading(): Locator {
-    return this.page.getByRole('heading').first();
-  }
-
-  get checksNavLink(): Locator {
-    return this.page
-      .getByRole('link', { name: /^checks$/i })
-      .or(this.page.getByRole('tab', { name: /checks/i }))
-      .or(this.page.getByRole('button', { name: /checks/i }))
-      .first();
-  }
-
   get checksHeading(): Locator {
     return this.page.getByRole('heading', { name: /^checks$/i }).first();
-  }
-
-  get locationFilter(): Locator {
-    return this.page
-      .getByRole('combobox')
-      .or(this.page.getByRole('button', { name: /region/i }))
-      .first();
   }
 
   get searchChecksInput(): Locator {
@@ -43,10 +25,6 @@ export class ChecksPage {
 
   get probesFilterInput(): Locator {
     return this.page.locator('input[placeholder="All probes"]').first();
-  }
-
-  get clearFiltersButton(): Locator {
-    return this.page.getByRole('button', { name: /clear|reset/i }).first();
   }
 
   get rows(): Locator {
@@ -72,22 +50,15 @@ export class ChecksPage {
   }
 
   async openChecks(): Promise<void> {
-    await expect(this.page).toHaveURL(/play\.grafana\.org/);
-    const allChecksRegion = this.page.getByRole('region', { name: /all checks/i }).first();
-    if ((await this.checksHeading.count()) > 0 || (await allChecksRegion.count()) > 0) {
+    if (this.checksPathPattern.test(this.page.url())) {
       return;
     }
-
-    const hasChecksNav = (await this.checksNavLink.count()) > 0;
-    if (hasChecksNav) {
-      await this.checksNavLink.click();
-      return;
-    }
-
     await this.page.goto('/a/grafana-synthetic-monitoring-app/checks');
+    await expect(this.page).toHaveURL(this.checksPathPattern);
   }
 
   async waitForChecksContent(): Promise<void> {
+    await expect(this.page).toHaveURL(this.checksPathPattern);
     const allChecksRegion = this.page.getByRole('region', { name: /all checks/i }).first();
     if ((await allChecksRegion.count()) > 0) {
       await expect(allChecksRegion).toBeVisible();
@@ -103,17 +74,6 @@ export class ChecksPage {
       return cardCount;
     }
     return await this.rows.count();
-  }
-
-  async openLocationFilter(): Promise<void> {
-    await this.locationFilter.click();
-  }
-
-  async selectLocation(locationName: string): Promise<void> {
-    await this.openLocationFilter();
-    const option = this.page.getByRole('option', { name: new RegExp(locationName, 'i') }).first()
-      .or(this.page.getByText(new RegExp(locationName, 'i')).first());
-    await option.click();
   }
 
   async openFirstAvailableCheck(): Promise<string> {

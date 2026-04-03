@@ -7,10 +7,6 @@ export class CheckDetailsPage {
     this.page = page;
   }
 
-  get heading(): Locator {
-    return this.page.getByRole('heading').first();
-  }
-
   get detailsContainer(): Locator {
     return this.page.locator('main, [role="main"], body').first();
   }

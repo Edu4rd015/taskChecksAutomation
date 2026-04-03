@@ -2,7 +2,13 @@ import { expect, test } from '@playwright/test';
 import { ChecksPage } from '../pages/checks.page';
 import { CheckDetailsPage } from '../pages/check-details.page';
 
+const POST_TEST_HOLD_MS = 5000;
+
 test.describe('Grafana Synthetic Monitoring demo', () => {
+  test.afterEach(async ({ page }) => {
+    await page.waitForTimeout(POST_TEST_HOLD_MS);
+  });
+
   test('a) Filtering Checks by Location', async ({ page }) => {
     const checksPage = new ChecksPage(page);
 

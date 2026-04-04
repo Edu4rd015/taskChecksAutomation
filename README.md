@@ -14,6 +14,7 @@ npx playwright install
 ```bash
 npx playwright test
 ```
+Run this command from the project root folder (the directory where the `tests` folder is visible).
 
 ## Open HTML report
 ```bash

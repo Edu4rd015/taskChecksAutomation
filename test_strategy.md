@@ -6,10 +6,10 @@ The goal is to validate core user flows in the Grafana Synthetic Monitoring demo
 - opening and validating check details,
 - handling empty-result or no-data scenarios.
 
-The exercise requires 3 manual test cases and 2–3 automated UI scenarios. The platform under test is the Grafana Synthetic Monitoring App Demo described in the case-study brief. fileciteturn0file0
+The exercise requires 3 manual test cases and 2–3 automated UI scenarios. The platform under test is the Grafana Synthetic Monitoring App Demo described in the case-study brief.
 
 ## 2) Product understanding
-Grafana Synthetic Monitoring provides an external perspective on application health by running checks from probe locations around the world and surfacing metrics and logs in Grafana. Grafana’s documentation and plugin description emphasize checks, probe locations, and visibility into service availability and correctness. citeturn225687search2turn225687search4turn225687search5
+Grafana Synthetic Monitoring provides an external perspective on application health by running checks from probe locations around the world and surfacing metrics and logs in Grafana. Grafana’s documentation and plugin description emphasize checks, probe locations, and visibility into service availability and correctness.
 
 This makes filtering and check-detail navigation business-critical because users must be able to:
 - find the relevant check quickly,
@@ -19,7 +19,7 @@ This makes filtering and check-detail navigation business-critical because users
 
 ## 3) Scope
 ### In scope
-- Checks list/grid/table behavior
+- Checks list/table behavior
 - Location filtering
 - Check detail navigation
 - Empty state / no matching data state
@@ -99,7 +99,7 @@ Filtering and detail pages may load asynchronously.
 - Defects documented with reproduction steps and severity
 
 ## 8) Environments
-- Browser: Chromium via Playwright
+- Browser: Chromium, Firefox, Webkit via Playwright
 - OS: any desktop OS supported by Playwright
 - Test framework: Playwright Test with TypeScript
 
@@ -181,17 +181,3 @@ Recommended strategy:
 - validate the detail page contains that same name,
 - assert filtered results are consistent with the selected location where location is visible,
 - for no-data, validate the presence of an explicit empty-state indicator rather than exact text if needed.
-
-## 13) Non-functional considerations
-Even though this exercise focuses on UI behavior, I would also note:
-- responsiveness should be smoke-tested at one desktop and one smaller viewport,
-- accessibility can be partially improved/tested through semantic-role locators,
-- console errors should be monitored during exploratory testing.
-
-## 14) Suggested improvements for a real project
-For production-level coverage, I would add:
-- API-level validations for filter payloads,
-- visual regression for critical empty states,
-- cross-browser smoke coverage,
-- CI execution on pull requests,
-- defect tagging by area: filters, details, empty-state, navigation.

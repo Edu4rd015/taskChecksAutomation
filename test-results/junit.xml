@@ -1,26 +1,26 @@
-<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="221.36150999999998">
-<testsuite name="checks.spec.ts" timestamp="2026-04-03T08:16:29.250Z" hostname="chromium" tests="3" failures="0" skipped="0" time="52.421" errors="0">
-<testcase name="Grafana Synthetic Monitoring demo › a) Filtering Checks by Location" classname="checks.spec.ts" time="19.747">
+<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="231.50922199999997">
+<testsuite name="checks.spec.ts" timestamp="2026-04-03T14:43:11.264Z" hostname="chromium" tests="3" failures="0" skipped="0" time="60.32" errors="0">
+<testcase name="Grafana Synthetic Monitoring demo › a) Filtering Checks by Location" classname="checks.spec.ts" time="22.866">
 </testcase>
-<testcase name="Grafana Synthetic Monitoring demo › b) Viewing Check Details" classname="checks.spec.ts" time="16.721">
+<testcase name="Grafana Synthetic Monitoring demo › b) Viewing Check Details" classname="checks.spec.ts" time="18.956">
 </testcase>
-<testcase name="Grafana Synthetic Monitoring demo › c) Handling No Data Scenario" classname="checks.spec.ts" time="15.953">
-</testcase>
-</testsuite>
-<testsuite name="checks.spec.ts" timestamp="2026-04-03T08:16:29.250Z" hostname="firefox" tests="3" failures="0" skipped="0" time="76.446" errors="0">
-<testcase name="Grafana Synthetic Monitoring demo › a) Filtering Checks by Location" classname="checks.spec.ts" time="32.379">
-</testcase>
-<testcase name="Grafana Synthetic Monitoring demo › b) Viewing Check Details" classname="checks.spec.ts" time="22.724">
-</testcase>
-<testcase name="Grafana Synthetic Monitoring demo › c) Handling No Data Scenario" classname="checks.spec.ts" time="21.343">
+<testcase name="Grafana Synthetic Monitoring demo › c) Handling No Data Scenario" classname="checks.spec.ts" time="18.498">
 </testcase>
 </testsuite>
-<testsuite name="checks.spec.ts" timestamp="2026-04-03T08:16:29.250Z" hostname="webkit" tests="3" failures="0" skipped="0" time="70.989" errors="0">
-<testcase name="Grafana Synthetic Monitoring demo › a) Filtering Checks by Location" classname="checks.spec.ts" time="26.661">
+<testsuite name="checks.spec.ts" timestamp="2026-04-03T14:43:11.264Z" hostname="firefox" tests="3" failures="0" skipped="0" time="76.576" errors="0">
+<testcase name="Grafana Synthetic Monitoring demo › a) Filtering Checks by Location" classname="checks.spec.ts" time="31.433">
 </testcase>
-<testcase name="Grafana Synthetic Monitoring demo › b) Viewing Check Details" classname="checks.spec.ts" time="23.094">
+<testcase name="Grafana Synthetic Monitoring demo › b) Viewing Check Details" classname="checks.spec.ts" time="24.004">
 </testcase>
-<testcase name="Grafana Synthetic Monitoring demo › c) Handling No Data Scenario" classname="checks.spec.ts" time="21.234">
+<testcase name="Grafana Synthetic Monitoring demo › c) Handling No Data Scenario" classname="checks.spec.ts" time="21.139">
+</testcase>
+</testsuite>
+<testsuite name="checks.spec.ts" timestamp="2026-04-03T14:43:11.264Z" hostname="webkit" tests="3" failures="0" skipped="0" time="74.667" errors="0">
+<testcase name="Grafana Synthetic Monitoring demo › a) Filtering Checks by Location" classname="checks.spec.ts" time="28.015">
+</testcase>
+<testcase name="Grafana Synthetic Monitoring demo › b) Viewing Check Details" classname="checks.spec.ts" time="24.964">
+</testcase>
+<testcase name="Grafana Synthetic Monitoring demo › c) Handling No Data Scenario" classname="checks.spec.ts" time="21.688">
 </testcase>
 </testsuite>
 </testsuites>

@@ -118,7 +118,7 @@ Filtering and detail pages may load asynchronously.
 ## 10) Recommended manual test cases
 
 ### TC-01 — Filter checks by location
-**Precondition:** User is on the checks overview page.
+**Precondition:** User has a browser with access to the Grafana Synthetic Monitoring demo.
 
 **Steps:**
 1. Open the Grafana Synthetic Monitoring demo.
@@ -138,7 +138,7 @@ Filtering and detail pages may load asynchronously.
 **Steps:**
 1. Open the checks page.
 2. Select any visible check.
-3. Open the check details page/panel.
+3. Open the check details page/panel via view dashboard for the selected check.
 
 **Expected result:**
 - The details screen opens successfully.

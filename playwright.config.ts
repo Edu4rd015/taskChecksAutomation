@@ -7,7 +7,7 @@ export default defineConfig({
     timeout: 10_000,
   },
   fullyParallel: true,
-  retries: 0,
+  retries: 1,
   reporter: [['html'], ['list'], ['junit', { outputFile: 'test-results/junit.xml' }]],
   use: {
     baseURL: 'https://play.grafana.org',
@@ -20,13 +20,13 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    /*{
+    {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-    },*/
+    },
   ],
 });

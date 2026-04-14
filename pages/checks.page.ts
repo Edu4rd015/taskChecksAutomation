@@ -14,6 +14,16 @@ export class ChecksPage {
     return this.page.getByRole('heading', { name: /^checks$/i }).first();
   }
 
+  get additionalFiltersDialog(): Locator {
+    // Scope dialog interactions so shared labels like "Close" stay unambiguous.
+    return this.page.getByRole('dialog', { name: /additional filters/i }).first();
+  }
+
+  get closeButton(): Locator {
+    // Use the dialog footer action instead of a page-wide text match.
+    return this.additionalFiltersDialog.getByRole('button', { name: /^close$/i }).last();
+  }
+
   get searchChecksInput(): Locator {
     // Search field for filtering checks; includes a fallback selector for UI variants.
     return this.page
@@ -71,13 +81,14 @@ export class ChecksPage {
     await expect(this.page).toHaveURL(this.checksPathPattern);
     // The UI can render either the "All checks" region or a plain heading first.
     // Accept either state to keep synchronization resilient across browser engines.
+    await this.page.waitForLoadState('domcontentloaded');
     const allChecksRegion = this.page.getByRole('region', { name: /all checks/i }).first();
     if ((await allChecksRegion.count()) > 0) {
       await expect(allChecksRegion).toBeVisible();
     } else {
       await expect(this.checksHeading).toBeVisible();
     }
-    await this.page.waitForLoadState('domcontentloaded');
+    //await this.page.waitForLoadState('domcontentloaded');
   }
 
   async getRowCount(): Promise<number> {
@@ -140,7 +151,8 @@ export class ChecksPage {
     await expect(firstOption).toBeVisible();
     const selectedProbe = ((await firstOption.textContent()) ?? '').trim();
     await firstOption.click();
-    await this.page.keyboard.press('Escape');
+    await expect(this.closeButton).toBeVisible();
+    await this.closeButton.click();
     await this.page.waitForLoadState('domcontentloaded');
     return selectedProbe;
   }
